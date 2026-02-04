@@ -1,0 +1,164 @@
+<style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.85)),
+          url("https://i.redd.it/1hdamrx4uju71.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      /* TOP BAR */
+      .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background: rgba(155, 187, 210, 0.95);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        z-index: 1000;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .bar-icon {
+        position: absolute;
+        left: 20px;
+        width: 42px;
+        height: 42px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid #000;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      }
+
+      /* SCROLL AREA */
+      .content {
+        padding-top: 100px;
+        height: 100vh;
+        overflow-y: auto;
+      }
+
+      .container {
+        width: fit-content;
+        margin: 0 auto 60px;
+        background: rgba(255, 255, 255, 0.75);
+        padding: 35px 45px;
+        border-radius: 16px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+        animation: fadeSlide 1.2s ease forwards;
+      }
+
+      @keyframes fadeSlide {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      hr {
+        border: none;
+        height: 2px;
+        background: linear-gradient(to right, #000, transparent);
+        margin: 15px 0 25px;
+      }
+
+      img {
+        display: block;
+        margin: 20px auto;
+        border-radius: 12px;
+        border: 3px solid #000;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+      }
+
+      p {
+        line-height: 1.7;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 6px;
+        transition: transform 0.3s, color 0.3s;
+      }
+
+      li:hover {
+        transform: translateX(6px);
+        color: #2563eb;
+      }
+
+      .attachments {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .attachments img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 3px solid #000;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .attachments img:hover {
+        transform: scale(1.08);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+      }
+
+      .img-swap {
+        position: relative;
+        width: 120px;
+        height: 120px;
+      }
+
+      .img-swap img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 3px solid #000;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+      }
+
+      .img-back {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+
+      .img-swap:hover .img-front {
+        opacity: 0;
+        transform: scale(1.05);
+      }
+
+      .img-swap:hover .img-back {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    </style>
