@@ -1,0 +1,39 @@
+{
+  "name": "medina-final_project",
+  "version": "0.1.0",
+  "private": true,
+
+  "homepage": "https://reiimedina.github.io/CC14-Web-Application-Development/medina-final_project",
+
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -b gh-pages",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.5.9",
+    "autoprefixer": "^10.5.0"
+  },
+
+  "eslintConfig": {
+    "extends": ["react-app", "react-app/jest"]
+  },
+
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  }
+}

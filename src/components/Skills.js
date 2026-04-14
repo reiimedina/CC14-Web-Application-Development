@@ -1,0 +1,11 @@
+const Skills = () => (
+  <section className="my-12">
+    <h2 className="text-3xl font-semibold text-blue-600">Skills</h2>
+    <ul className="mt-4 list-disc ml-6">
+      <li>React</li>
+      <li>JavaScript</li>
+      <li>Tailwind CSS</li>
+    </ul>
+  </section>
+);
+export default Skills;
